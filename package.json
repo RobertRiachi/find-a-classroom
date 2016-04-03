@@ -4,6 +4,7 @@
   "description": "Boilerplate project for building Isomorphic apps using React and Redux",
   "scripts": {
     "start": "cross-env NODE_ENV=development node index.js",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base shared --inline --hot",
     "start:prod": "cross-env NODE_ENV=production node index.js",
     "bs": "npm run clean && npm run build && npm run start:prod",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js && npm run minify",
@@ -35,7 +36,8 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0-rc5",
-    "react-tap-event-plugin": "^0.2.2"
+    "react-tap-event-plugin": "^0.2.2",
+    "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta6",
