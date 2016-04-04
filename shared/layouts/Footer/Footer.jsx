@@ -22,8 +22,17 @@ function Footer() {
     <div style={contStyle} className="row end-xs">
       <p style={textStyle}>
         A project by &nbsp;
+        <a style={hrefStyle} href={'https://github.com/RobertRiachi'} target="_blank">
+          Robert Riachi
+        </a>, &nbsp;
+        <a style={hrefStyle} href={'https://github.com/micklethepickle'} target="_blank">
+          Michel Ma
+        </a>, &nbsp;
         <a style={hrefStyle} href={'https://github.com/lorix-lpan'} target="_blank">
           @lorix-lpan
+        </a>, &nbsp;
+        <a href={'https://github.com/PineapplePrograms'} target="_blank" >
+          <img src ="http://pineappleprograms.com/images/pplogo.png" alt="PineapplePrograms" width="30"></img>
         </a>
       </p>
     </div>

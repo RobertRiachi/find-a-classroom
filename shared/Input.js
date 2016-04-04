@@ -57,11 +57,14 @@ export default class Input extends React.Component {
         this.props.changeRoom(newRooms);
     }
     render () {
+        const penis = {
 
+            : "red"
+        };
 
         return(
             <div>
-            <button onClick={this.handleMondayChange.bind(this)}>Monday (M)</button>
+            <button style={penis} onClick={this.handleMondayChange.bind(this)}>Monday (M)</button>
             <button onClick={this.handleTuesdayChange.bind(this)}>Tuesday (T)</button>
             <button onClick={this.handleWednesdayChange.bind(this)}>Wednesday (W)</button>
             <button onClick={this.handleThursdayChange.bind(this)}>Thursday (H)</button>
