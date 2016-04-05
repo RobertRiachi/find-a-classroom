@@ -188,7 +188,9 @@ export default class Input extends React.Component {
             cursor: this.state.cursor,
             backgroundColor: this.state.bgColS
         };
-
+        const inputStyle = {
+            fontSize: "30px"
+        }
         return(
             <center><div>
             <btn onMouseEnter={this.btnStyleHoverM.bind(this)} onMouseLeave={this.btnStyleoffHoverM.bind(this)} onClick={this.handleMondayChange.bind(this)} style={btnStyleM}>Monday (M)</btn>
@@ -198,7 +200,7 @@ export default class Input extends React.Component {
             <btn onMouseEnter={this.btnStyleHoverF.bind(this)} onMouseLeave={this.btnStyleoffHoverF.bind(this)} onClick={this.handleFridayChange.bind(this)}style={btnStyleF}>Friday (F)</btn>
             <p>Day Selected: {this.state.day}</p>
             <p> Enter a Time (Note: If 1:00pm, write 13:00, etc...) </p>
-            <input onChange = {this.handleTimeChange.bind(this)} />
+            <input onChange = {this.handleTimeChange.bind(this)} style = {inputStyle}/>
             <btn onClick={this.handleFinder.bind(this)} style={btnStyleS}> Search </btn>
 
             </div></center>
