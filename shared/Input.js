@@ -16,7 +16,8 @@ export default class Input extends React.Component {
           bgColW: "#00BCD4",
           bgColH: "#00BCD4",
           bgColF: "#00BCD4",
-          cursor: "pointer"
+          cursor: "pointer",
+          bgColS: "#00BCD4"
         };
     }
 
@@ -112,9 +113,9 @@ export default class Input extends React.Component {
         const btnStyleM = {
             position: "relative",
             display: "block",
-            height: "30px",
+            height: "60px",
             width: "200px",
-            lineHeight: "30px",
+            lineHeight: "60px",
             borderRadius: "6px",
             marginTop: "10px",
             color: "white",
@@ -125,9 +126,9 @@ export default class Input extends React.Component {
         const btnStyleT = {
             position: "relative",
             display: "block",
-            height: "30px",
+            height: "60px",
             width: "200px",
-            lineHeight: "30px",
+            lineHeight: "60px",
             borderRadius: "6px",
             marginTop: "10px",
             color: "white",
@@ -138,9 +139,9 @@ export default class Input extends React.Component {
         const btnStyleW = {
             position: "relative",
             display: "block",
-            height: "30px",
+            height: "60px",
             width: "200px",
-            lineHeight: "30px",
+            lineHeight: "60px",
             borderRadius: "6px",
             marginTop: "10px",
             color: "white",
@@ -151,9 +152,9 @@ export default class Input extends React.Component {
         const btnStyleH = {
             position: "relative",
             display: "block",
-            height: "30px",
+            height: "60px",
             width: "200px",
-            lineHeight: "30px",
+            lineHeight: "60px",
             borderRadius: "6px",
             marginTop: "10px",
             color: "white",
@@ -164,15 +165,28 @@ export default class Input extends React.Component {
         const btnStyleF = {
             position: "relative",
             display: "block",
-            height: "30px",
+            height: "60px",
             width: "200px",
-            lineHeight: "30px",
+            lineHeight: "60px",
             borderRadius: "6px",
             marginTop: "10px",
             color: "white",
             border: "1px solid black",
             cursor: this.state.cursor,
             backgroundColor: this.state.bgColF
+        };
+        const btnStyleS = {
+            position: "relative",
+            display: "block",
+            height: "60px",
+            width: "200px",
+            lineHeight: "60px",
+            borderRadius: "6px",
+            marginTop: "10px",
+            color: "white",
+            border: "1px solid black",
+            cursor: this.state.cursor,
+            backgroundColor: this.state.bgColS
         };
 
         return(
@@ -185,7 +199,7 @@ export default class Input extends React.Component {
             <p>Day Selected: {this.state.day}</p>
             <p> Enter a Time (Note: If 1:00pm, write 13:00, etc...) </p>
             <input onChange = {this.handleTimeChange.bind(this)} />
-            <btn onClick={this.handleFinder.bind(this)}> Search </btn>
+            <btn onClick={this.handleFinder.bind(this)} style={btnStyleS}> Search </btn>
 
             </div></center>
         );
