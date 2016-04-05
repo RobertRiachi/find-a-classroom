@@ -32,7 +32,7 @@ function Footer() {
           @lorix-lpan
         </a>, &nbsp;
         <a href={'https://github.com/PineapplePrograms'} target="_blank" >
-          <img src ="http://pineappleprograms.com/images/pplogo.png" alt="PineapplePrograms" width="30"></img>
+          <img src ="http://pineappleprograms.com/images/pplogo.png" alt="PineapplePrograms" width="10"></img>
         </a>
       </p>
     </div>

@@ -10,11 +10,12 @@ export default class Input extends React.Component {
         this.state = {
           day: "",
           times: 0,
-          bgCol: "black",
-          bgColT: "black",
-          bgColW: "black",
-          bgColH: "black",
-          bgColF: "black"
+          bgCol: "#00BCD4",
+          bgColM: "#00BCD4",
+          bgColT: "#00BCD4",
+          bgColW: "#00BCD4",
+          bgColH: "#00BCD4",
+          bgColF: "#00BCD4"
         };
     }
 
@@ -54,7 +55,7 @@ export default class Input extends React.Component {
         for (var i in classRoom){
             for (var y in classRoom[i].time[day]){
                 if (timeS > classRoom[i].time[day][y][0] && timeS < classRoom[i].time[day][y][1]){
-                    newRooms += classRoom[i].name + ", ";
+                    newRooms += classRoom[i].name + " ";
 
                 }
             }
@@ -62,13 +63,52 @@ export default class Input extends React.Component {
         this.props.changeRoom(newRooms);
     }
 
-    //button hovering method
-    btnStyleHover(){
-        this.setState({bgCol: "red"})
+    //button onHovering methods
+    btnStyleHoverM(){
+        this.setState({bgColM: "#0080ff"})
 
     }
+    btnStyleHoverT(){
+        this.setState({bgColT: "#0080ff"})
+
+    }
+    btnStyleHoverW(){
+        this.setState({bgColW: "#0080ff"})
+
+    }
+    btnStyleHoverH(){
+        this.setState({bgColH: "#0080ff"})
+
+    }
+    btnStyleHoverF(){
+        this.setState({bgColF: "#0080ff"})
+
+    }
+
+    //button offHovering methods
+    btnStyleoffHoverM(){
+        this.setState({bgColM: "#00BCD4"})
+
+    }
+    btnStyleoffHoverT(){
+        this.setState({bgColT: "#00BCD4"})
+
+    }
+    btnStyleoffHoverW(){
+        this.setState({bgColW: "#00BCD4"})
+
+    }
+    btnStyleoffHoverH(){
+        this.setState({bgColH: "#00BCD4"})
+
+    }
+    btnStyleoffHoverF(){
+        this.setState({bgColF: "#00BCD4"})
+
+    }
+
     render () {
-        const btnStyle = {
+        const btnStyleM = {
             position: "relative",
             display: "block",
             height: "30px",
@@ -78,16 +118,64 @@ export default class Input extends React.Component {
             marginTop: "10px",
             color: "white",
             border: "1px solid black",
-            backgroundColor: this.state.bgCol
+            backgroundColor: this.state.bgColM
+        };
+        const btnStyleT = {
+            position: "relative",
+            display: "block",
+            height: "30px",
+            width: "200px",
+            lineHeight: "30px",
+            borderRadius: "6px",
+            marginTop: "10px",
+            color: "white",
+            border: "1px solid black",
+            backgroundColor: this.state.bgColT
+        };
+        const btnStyleW = {
+            position: "relative",
+            display: "block",
+            height: "30px",
+            width: "200px",
+            lineHeight: "30px",
+            borderRadius: "6px",
+            marginTop: "10px",
+            color: "white",
+            border: "1px solid black",
+            backgroundColor: this.state.bgColW
+        };
+        const btnStyleH = {
+            position: "relative",
+            display: "block",
+            height: "30px",
+            width: "200px",
+            lineHeight: "30px",
+            borderRadius: "6px",
+            marginTop: "10px",
+            color: "white",
+            border: "1px solid black",
+            backgroundColor: this.state.bgColH
+        };
+        const btnStyleF = {
+            position: "relative",
+            display: "block",
+            height: "30px",
+            width: "200px",
+            lineHeight: "30px",
+            borderRadius: "6px",
+            marginTop: "10px",
+            color: "white",
+            border: "1px solid black",
+            backgroundColor: this.state.bgColF
         };
 
         return(
             <center><div>
-            <btn onMouseEnter={this.btnStyleHover.bind(this)} onClick={this.handleMondayChange.bind(this)} style={btnStyle} bgCol = "black">Monday (M)</btn>
-            <btn onClick={this.handleTuesdayChange.bind(this)} style={btnStyle}>Tuesday (T)</btn>
-            <btn onClick={this.handleWednesdayChange.bind(this)} style={btnStyle}>Wednesday (W)</btn>
-            <btn onClick={this.handleThursdayChange.bind(this)} style={btnStyle}>Thursday (H)</btn>
-            <btn onClick={this.handleFridayChange.bind(this)}style={btnStyle}>Friday (F)</btn>
+            <btn onMouseEnter={this.btnStyleHoverM.bind(this)} onMouseLeave={this.btnStyleoffHoverM.bind(this)} onClick={this.handleMondayChange.bind(this)} style={btnStyleM}>Monday (M)</btn>
+            <btn onMouseEnter={this.btnStyleHoverT.bind(this)} onMouseLeave={this.btnStyleoffHoverT.bind(this)} onClick={this.handleTuesdayChange.bind(this)} style={btnStyleT}>Tuesday (T)</btn>
+            <btn onMouseEnter={this.btnStyleHoverW.bind(this)} onMouseLeave={this.btnStyleoffHoverW.bind(this)} onClick={this.handleWednesdayChange.bind(this)} style={btnStyleW}>Wednesday (W)</btn>
+            <btn onMouseEnter={this.btnStyleHoverH.bind(this)} onMouseLeave={this.btnStyleoffHoverH.bind(this)} onClick={this.handleThursdayChange.bind(this)} style={btnStyleH}>Thursday (H)</btn>
+            <btn onMouseEnter={this.btnStyleHoverF.bind(this)} onMouseLeave={this.btnStyleoffHoverF.bind(this)} onClick={this.handleFridayChange.bind(this)}style={btnStyleF}>Friday (F)</btn>
             <p>Day Selected: {this.state.day}</p>
             <p> Enter a Time (Note: If 1:00pm, write 13:00, etc...) </p>
             <input onChange = {this.handleTimeChange.bind(this)} />

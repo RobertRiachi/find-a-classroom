@@ -8,7 +8,7 @@ export default class RoomNumbers extends React.Component{
     constructor(){
         super();
         this.state = {
-            rooms: "Enter Time and Day",
+            rooms: <img src ="http://pineappleprograms.com/images/pplogo.png" alt="PineapplePrograms" width="30"></img>,
 
 
         };

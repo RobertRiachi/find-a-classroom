@@ -3,10 +3,15 @@ import ReactDom from "react-dom";
 import RoomNumbers from "./RoomNumbers";
 
 function Home() {
+    const hstyle ={
+        color: "#00BCD4"
+        };
   return (
   <div>
-    <h1>Michel and Robert were here</h1>
+    <center>
+    <h1 style={hstyle}>Marianopolis Empty Classroom Finder!</h1>
     <RoomNumbers />
+    </center>
   </div>
 
   );
