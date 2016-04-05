@@ -10,7 +10,7 @@ export default class Input extends React.Component {
         this.state = {
           day: "",
           times: 0,
-          bgColM: "black",
+          bgCol: "black",
           bgColT: "black",
           bgColW: "black",
           bgColH: "black",
