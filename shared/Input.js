@@ -15,7 +15,8 @@ export default class Input extends React.Component {
           bgColT: "#00BCD4",
           bgColW: "#00BCD4",
           bgColH: "#00BCD4",
-          bgColF: "#00BCD4"
+          bgColF: "#00BCD4",
+          cursor: "pointer"
         };
     }
 
@@ -118,6 +119,7 @@ export default class Input extends React.Component {
             marginTop: "10px",
             color: "white",
             border: "1px solid black",
+            cursor: this.state.cursor,
             backgroundColor: this.state.bgColM
         };
         const btnStyleT = {
@@ -130,6 +132,7 @@ export default class Input extends React.Component {
             marginTop: "10px",
             color: "white",
             border: "1px solid black",
+            cursor: this.state.cursor,
             backgroundColor: this.state.bgColT
         };
         const btnStyleW = {
@@ -142,6 +145,7 @@ export default class Input extends React.Component {
             marginTop: "10px",
             color: "white",
             border: "1px solid black",
+            cursor: this.state.cursor,
             backgroundColor: this.state.bgColW
         };
         const btnStyleH = {
@@ -154,6 +158,7 @@ export default class Input extends React.Component {
             marginTop: "10px",
             color: "white",
             border: "1px solid black",
+            cursor: this.state.cursor,
             backgroundColor: this.state.bgColH
         };
         const btnStyleF = {
@@ -166,6 +171,7 @@ export default class Input extends React.Component {
             marginTop: "10px",
             color: "white",
             border: "1px solid black",
+            cursor: this.state.cursor,
             backgroundColor: this.state.bgColF
         };
 
