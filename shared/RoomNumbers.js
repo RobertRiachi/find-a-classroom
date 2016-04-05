@@ -8,7 +8,7 @@ export default class RoomNumbers extends React.Component{
     constructor(){
         super();
         this.state = {
-            rooms: <img src ="http://pineappleprograms.com/images/pplogo.png" alt="PineapplePrograms" width="30"></img>,
+            rooms: <img src ="http://pineappleprograms.com/images/pptitle2.png" alt="PineapplePrograms" width="90"></img>,
 
 
         };
