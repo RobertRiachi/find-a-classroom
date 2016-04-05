@@ -10,6 +10,11 @@ export default class Input extends React.Component {
         this.state = {
           day: "",
           times: 0,
+          bgColM: "black",
+          bgColT: "black",
+          bgColW: "black",
+          bgColH: "black",
+          bgColF: "black"
         };
     }
 
@@ -49,29 +54,46 @@ export default class Input extends React.Component {
         for (var i in classRoom){
             for (var y in classRoom[i].time[day]){
                 if (timeS > classRoom[i].time[day][y][0] && timeS < classRoom[i].time[day][y][1]){
-                    newRooms += ", " + classRoom[i].name;
+                    newRooms += classRoom[i].name + ", ";
 
                 }
             }
         }
         this.props.changeRoom(newRooms);
     }
-    render () {
 
+    //button hovering method
+    btnStyleHover(){
+        this.setState({bgCol: "red"})
+
+    }
+    render () {
+        const btnStyle = {
+            position: "relative",
+            display: "block",
+            height: "30px",
+            width: "200px",
+            lineHeight: "30px",
+            borderRadius: "6px",
+            marginTop: "10px",
+            color: "white",
+            border: "1px solid black",
+            backgroundColor: this.state.bgCol
+        };
 
         return(
-            <div>
-            <button onClick={this.handleMondayChange.bind(this)}>Monday (M)</button>
-            <button onClick={this.handleTuesdayChange.bind(this)}>Tuesday (T)</button>
-            <button onClick={this.handleWednesdayChange.bind(this)}>Wednesday (W)</button>
-            <button onClick={this.handleThursdayChange.bind(this)}>Thursday (H)</button>
-            <button onClick={this.handleFridayChange.bind(this)}>Friday (F)</button>
+            <center><div>
+            <btn onMouseEnter={this.btnStyleHover.bind(this)} onClick={this.handleMondayChange.bind(this)} style={btnStyle} bgCol = "black">Monday (M)</btn>
+            <btn onClick={this.handleTuesdayChange.bind(this)} style={btnStyle}>Tuesday (T)</btn>
+            <btn onClick={this.handleWednesdayChange.bind(this)} style={btnStyle}>Wednesday (W)</btn>
+            <btn onClick={this.handleThursdayChange.bind(this)} style={btnStyle}>Thursday (H)</btn>
+            <btn onClick={this.handleFridayChange.bind(this)}style={btnStyle}>Friday (F)</btn>
             <p>Day Selected: {this.state.day}</p>
             <p> Enter a Time (Note: If 1:00pm, write 13:00, etc...) </p>
             <input onChange = {this.handleTimeChange.bind(this)} />
-            <button onClick={this.handleFinder.bind(this)}> Search </button>
+            <btn onClick={this.handleFinder.bind(this)}> Search </btn>
 
-            </div>
+            </div></center>
         );
     }
 
