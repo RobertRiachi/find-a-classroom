@@ -15,7 +15,8 @@ export default class Input extends React.Component {
           bgColT: "#00BCD4",
           bgColW: "#00BCD4",
           bgColH: "#00BCD4",
-          bgColF: "#00BCD4"
+          bgColF: "#00BCD4",
+          bgColS: "#00BCD4"
         };
     }
 
@@ -168,6 +169,18 @@ export default class Input extends React.Component {
             border: "1px solid black",
             backgroundColor: this.state.bgColF
         };
+        const btnStyleS = {
+            position: "relative",
+            display: "block",
+            height: "30px",
+            width: "200px",
+            lineHeight: "30px",
+            borderRadius: "6px",
+            marginTop: "10px",
+            color: "white",
+            border: "1px solid black",
+            backgroundColor: this.state.bgColS
+        };
 
         return(
             <center><div>
@@ -179,7 +192,7 @@ export default class Input extends React.Component {
             <p>Day Selected: {this.state.day}</p>
             <p> Enter a Time (Note: If 1:00pm, write 13:00, etc...) </p>
             <input onChange = {this.handleTimeChange.bind(this)} />
-            <btn onClick={this.handleFinder.bind(this)}> Search </btn>
+            <btn onClick={this.handleFinder.bind(this)} style={btnStyleS}> Search </btn>
 
             </div></center>
         );
